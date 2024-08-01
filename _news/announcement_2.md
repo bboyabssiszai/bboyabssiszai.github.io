@@ -1,33 +1,34 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: 第17届中国大学生计算机设计大赛(Web应用与开发) 国奖 基于中小电商的大数据挖掘(乐申公司)
+date: 2024-05-20
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+以解决企业痛点为目标，传统电商的数字化改造与大数据挖掘
 
 ---
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+从2023年9月底开始直到现在，在彭强老师（武汉理工数字资源中心副总工）的指导下，我带领团队与业界知名的眼镜企业-乐申公司合作，意在解决乐申公司数字化转型中所面临的一系列问题。
 
-#### Hipster list
+#### 数字化转型问题
 
 <ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
+    <li>数据留存困难</li>
+    <li>数据分析流程繁琐低效</li>
+    <li>潜在数据未得到有效洞察</li>
 </ul>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+针对数据留存，频繁的模拟点击会使得账号被封禁，浏览器抓取则遇到乱码问题。我首先改进了Selenium的抓取流程，首先解析字体，接着加入映射替换层，解决了字体反爬问题；其次结合Clicknium，加入随机点击层，使得抓取效率更为高效。
 
 ---
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+进一步针对数据分析过程，一方面，主管员工们在Excel中大量的VLookup函数等动作，通过openyl可以实现报表的自动处理。另一方面，针对上千万条订单数据，使用pandas无法全局加载，因而使用pyspark实现批处理，并通过sparksql实现查询分析以及通过Mlib实现算法分析。
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
+---
+至于数据洞察问题，主要有两种方案：一方面结合预测模型如CNN-LSTM实现对销额的精准预测，或结合聚类模型如VIF检验-K-Means-决策树事后检验实现对客户、商品的分类；另一方面结合生成模型如Prompt微调过的GLM-4实现对词根、对评论的深层挖掘。
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+> 分析平台投入使用后，以2024年3月为例，该月的报表处理错误率从7%下降至约3%；针对一些指标如售前人均销售额，可以实现实时计算，序列方差显著降低。通过对商品的重新分类，公司的商品销额同比增长了11%；挖掘后的词根投放购买后，使得客户满意度同比提高了20%
+
+与乐申公司的合作帮助我取得了如下成果：1）发表论文《基于云计算的中小企业业务流程优化与效率提升》（《信息与电脑》）2）`2024全国计算机设计大赛（Web应用与开发赛道）国奖` 3）`2024三创商务数据分析赛道国奖`。
