@@ -1,81 +1,49 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: CUMCM2023
+description: 基于时序分析和模拟退火算法的蔬菜定价和补货决策优化
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+在交易市场中，商超扮演着核心的枢纽角色。为最大化盈利，其必须综合考虑供应侧与需求侧的平衡。面对多样的蔬菜品类，如何依据销售和需求数据建立精确模型，进而制定每日的补货策略，成为了一个核心挑战。基于背景和题目，本文依次建立了商品关联关系挖掘模型，以及以商超最大收益为目的的蔬菜品类日补货总量及定价模型，蔬菜单品补货量和定价模型。
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1_销售量序列.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1_时间滞后性.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1_时序预测.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    蔬菜时间序列的分析，包括描述性统计的查看、WTLCC的计算模式以揭示引导-追随关系、时序预测补货量等。
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1_生命历程.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    以当天 t 为时间参考点，在前 2 天 t-2 进购的蔬菜品类 A 以原价进行售卖，卖出 n(t-1) 销量；在前 1 天 t-1 进行打折售卖，卖出 n’(t-1) 的销量，如果是直接扔掉而没有打折销售，则 n’(t-1) 取值为 0；在改天 t 不再售卖该批次的 A 品类。蔬菜品类 A 前 2 天的销售量之和即为品类 A 未损耗部分。
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+建立品类的补货定价的规划模型，采用模拟退火算法进行求解，以商超最大化收益作为规划目标，以利润率、打折率和补货满足率作为优化变量，约束为限制为利润率预测值与实际值的误差控制，以及补货满足率和打折率的值约束。进一步，建立单品补货定价的规划模型，引入关联规则分析算法挖掘蔬菜单品之间的相对重要程度，通过考虑蔬菜单品之间的关联性，使得重要的蔬菜能够有更大的概率被选择。
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/1_模拟退火优化.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/1_apriori改进.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
