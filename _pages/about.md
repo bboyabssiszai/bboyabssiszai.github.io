@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>.18041262219@163.com
+subtitle: <a href='#'>Affiliations</a>.whubear@whu.edu.cn
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_20251122.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>(+86)18041262219</p>
