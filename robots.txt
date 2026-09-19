@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://bboyabssiszai.github.io/sitemap.xml
