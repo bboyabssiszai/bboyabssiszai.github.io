@@ -1,0 +1,41 @@
+export const education = [
+ {title:['武汉大学 · 前沿交叉学科研究院','Wuhan University · Institute for Advanced Studies'],date:'2025.09 — 2027.06',role:['数据科学 · 硕士（在读）','M.S. in Data Science · In progress'],mark:'WHU',logo:'/logos/whu.png'},
+ {title:['武汉理工大学','Wuhan University of Technology'],date:'2021.09 — 2025.06',role:['信息管理与信息系统 · 本科','B.S. in Information Management and Information Systems'],mark:'WUT',logo:'/logos/whut.png'},
+];
+export const experience = [
+ {title:['快手 · 基础大模型与应用部 & 推荐模型部','Kuaishou · Foundation Models & Recommendation'],date:'2026.03 — Present',role:['AgentX Core Contributor · Harness 优化负责人','AgentX Core Contributor · Harness Optimization Lead'],mark:'K',logo:'/logos/kuaishou.png',items:[['建设面向工业推荐研发的 RSI-Agent 框架，连接方案生成、代码开发、在线 A/B 验证与经验沉淀。','Building an RSI-Agent framework for industrial recommendation, connecting ideation, development, online A/B evaluation and reusable knowledge.'],['负责 SGPO 自进化体系，通过线上 Session Trace 与历史 MR 回放优化 Brainstorm、Coding 和知识检索。','Leading SGPO self-evolution using production session traces and historical merge-request replay to improve brainstorming, coding and retrieval.'],['项目整体：3 个 Worker 三周推进 374 个 Idea，产出 10 个可全量实验；单位人力业务价值提升 3.7 倍。','Project-wide results: 3 workers explored 374 ideas in three weeks and produced 10 rollout-ready experiments; business value per person increased 3.7×.']]},
+ {title:['快手 · 基础大模型与应用部','Kuaishou · Foundation Models & Applications'],date:'2026.07 — 2026.09',role:['GameAI · KwaiGame 一键游戏生成 RSI Agent','GameAI · KwaiGame RSI Game Generation Agent'],mark:'K',logo:'/logos/kuaishou.png',items:[['RSI 驱动剧游架构演进：以生产失败、试玩问题与人工修改为反馈，持续优化剧本、交互及媒体协作，将可复用经验沉淀为 Agent 规则与评估约束。','RSI-driven game-agent evolution: using production failures, playtest issues and human edits to improve scripts, interaction and media coordination, then distilling reusable agent rules and evaluation constraints.'],['支撑互动剧游《我的未婚妻》上线；9 月 4—6 日日均 DAU 破万、纯新用户 3 万（项目上线口径）。','Supported the launch of My Fiancée: over 10K average DAU during September 4–6 and 30K new users, as reported by the project.'],['批量生产 7 个互动剧本，并行推进 7 组互动影游开发。','Produced 7 interactive scripts and advanced 7 interactive game development efforts in parallel.']]},
+ {title:['快手 · 基础大模型与应用部','Kuaishou · Foundation Models & Applications'],date:'2025.11 — 2026.07',role:['Kwali 核心建设 · 复杂视频生成 Agent','Kwali Core Development · Video Generation Agent'],mark:'K',logo:'/logos/kuaishou.png',items:[['将固定意图槽位升级为支持多工具、条件依赖和 Replan 的动态规划模型，基于 Slime / Qwen3-8B 构建长程 Agentic RL。','Replaced fixed intent slots with dynamic multi-tool planning, conditional dependencies and replanning; developed long-horizon Agentic RL with Slime / Qwen3-8B.'],['52 条均衡评测集：SFT 严格匹配从 3.8% 提升至 67.3%，宽松匹配达到 92.3%。','On a balanced 52-case evaluation set, strict matching increased from 3.8% to 67.3%; relaxed matching reached 92.3%.'],['构建“点货成金”视频生成 Skill，沉淀 8 大行业模板，串联商品理解、分镜生成、成片质检与复盘。','Built a reusable commerce-video skill with templates for 8 industries, connecting product understanding, storyboarding, production QA and reflection.']]},
+ {title:['中金公司 · 产品研究与解决方案部落','CICC · Product Research & Solutions'],date:'2024.06 — 2025.01',role:['算法研究员 · 投研辅助 Agent','Algorithm Researcher · Investment Research Agent'],mark:'C',logo:'/logos/cicc.png',items:[['构建滚动训练、市场识别、策略评估与动态配权闭环，结合量化子策略与可解释推理。','Connected rolling training, market-regime identification, strategy evaluation and dynamic allocation with quantitative strategies and explainable reasoning.'],['32 季度回测：年化信息比率 0.68，最大回撤 −9.47%（沪深 300 为 Benchmark）。','Across a 32-quarter backtest: annualized information ratio 0.68 and maximum drawdown −9.47%, benchmarked against CSI 300.']]},
+];
+type Research = { title: string; titleEn?: string; tag: string[]; body: string[]; url?: string };
+export const research: Research[] = [
+ {title:'AgentX Technical Report',tag:['技术报告','Technical report'],body:['面向工业推荐系统的 Agent 研发与自进化框架。','Agent development and self-evolution for industrial recommendation systems.'],url:'https://arxiv.org/pdf/2606.26859'},
+ {title:'RobustSGPO: Search-Space Control for Agent Harness Evolution',tag:['Harness Evolution','Harness Evolution'],body:['将组件与操作显式建模为搜索维度，扩大有效探索空间。30 个留出任务完成率从 60% 提升至 80%。','Factorizing components and operations to expand effective search. Completion on 30 held-out tasks improved from 60% to 80%.'],url:'https://arxiv.org/abs/2609.09646'},
+ {title:'From Trajectories to Evidence',tag:['研究论文','Research paper'],body:['围绕工具轨迹、验证记录与可追溯反馈开展研究。','Research into tool trajectories, verification records and traceable feedback.'],url:'https://arxiv.org/pdf/2608.05235'},
+ {title:'Search Spaces for RSI',tag:['实验完成 · 拟投 WWW','Experiments completed · WWW submission planned'],body:['研究递归自进化中的搜索空间设计。','Studying search-space design in recursive self-improvement.']},
+ {title:'AgentX v2 Technical Report',tag:['准备发布','In preparation'],body:['AgentX 新一代研发框架技术报告。','Technical report on the next generation of the AgentX framework.']},
+ {title:'Multimodal Large Models for Multidimensional Innovation Evaluation in Medical Papers',tag:['JASIST 在投 · 第一作者','Submitted to JASIST · First author'],body:['覆盖 19 种文本、图像与图文融合场景，从原创性、重要性和严谨性评价论文创新。','Evaluating originality, significance and rigor across 19 text, image and multimodal settings.']},
+ {title:'大模型驱动的审稿专家智能推荐算法研究',titleEn:'LLM-driven Intelligent Reviewer Recommendation',tag:['《数据分析与知识发现》在投 · 第二作者','Submitted · Second author'],body:['基于 QLoRA 轻量化微调，提升审稿匹配的准确性与可解释性。','Using QLoRA fine-tuning to improve reviewer-matching accuracy and explainability.']},
+];
+export const projects = [
+ {title:'AgentX',sub:['工业推荐系统 RSI-Agent','RSI-Agent for industrial recommendation'],tag:'Self-Evolution',body:['从 Brainstorm、Developing、Evaluation 到 Harness Evolution，让研发经验进入下一轮迭代。覆盖 Co-Agent、AutoResearch、工具轨迹与在线 A/B 反馈。','Connecting brainstorming, development, evaluation and harness evolution so each iteration informs the next. Spanning Co-Agent, AutoResearch, tool trajectories and online A/B feedback.'],stats:['374 Ideas','3.7× value / person'],href:'https://arxiv.org/pdf/2606.26859'},
+ {title:'KwaiGame',sub:['RSI 驱动的一键游戏生成 Agent','RSI-driven game generation agent'],tag:'RSI · Multimodal',body:['RSI 持续进化：以人工编辑、结构校验与试玩评价驱动反馈闭环，联合优化剧本、编排与多模态资产。将线性故事转为多分支、多结局剧本，并将验证后的经验沉淀为可复用生成约束。','Continuous RSI: using human edits, structural checks and playtest feedback to jointly improve scripts, orchestration and multimodal assets. Turning linear stories into branching, multi-ending experiences and distilling validated lessons into reusable generation constraints.'],stats:['7 scripts','7 game projects']},
+ {title:'Kwali',sub:['一键成片 · 点货成金','From a product brief to a finished video'],tag:'Agentic RL',body:['结合动态规划、长程 Agentic RL 和多节点质检，贯通商品 Spec、分镜、音视频生成、合成与复盘。','Combining dynamic planning, long-horizon Agentic RL and multi-stage QA across product specifications, storyboards, generation, editing and reflection.'],stats:['8 industry templates','92.3% relaxed match']},
+ {title:'EvoPM / GEP',sub:['多 Agent 组织结构进化','Evolving multi-agent organizations'],tag:'Open Source',body:['将进化对象从单 Agent 扩展到组织结构。设计 OrgGene / OrgCapsule 与 TeamGraph，支持运行时组织变异及权限门控。','Extending evolution from individual agents to organizations with OrgGene / OrgCapsule, TeamGraph, runtime mutations and permission gates.'],stats:['Contributor','OrgGene · TeamGraph'],href:'https://github.com/EvoMap/evolver'},
+];
+export const awards = [
+ ['公司级 AI 样板间 · AI 增值赛道金奖','Company AI Showcase · Gold Award, AI Value Creation','AgentX'],
+ ['社区科学线 AI 样板间 · 8 月 Top 3','Community Science AI Showcase · August Top 3','KwaiGame'],
+ ['社区科学线 AI 样板间 · 7 月 Top 3','Community Science AI Showcase · July Top 3','Kwali'],
+ ['模型部 Q1 优秀实习生 · Kstar 人才计划','Q1 Outstanding Intern · Kstar Talent Program','Kuaishou'],
+ ['商业化模型组 Q1 最佳热点 · 基础大模型与应用部 Q1–Q2 最佳分享','Q1 Best Hot Topic · Q1–Q2 Best Knowledge Sharing','Technical Sharing'],
+];
+export const skills = [
+ ['Languages & Engineering','Python','C++','Git','Linux'],
+ ['Agent Systems','LangGraph','AutoGen','Tool / Workflow','Harness Evolution'],
+ ['Training & Alignment','PyTorch','TensorFlow','SFT','PPO','DPO','GRPO'],
+ ['Inference & RL','vLLM','DeepSpeed','Slime','Agentic RL'],
+ ['Models','Transformer','BERT','GPT','Qwen-VL','BLIP'],
+ ['Evaluation','MMLU','AgentBench','LMSYS Chatbot Arena'],
+];
